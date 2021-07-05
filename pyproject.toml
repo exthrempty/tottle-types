@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "tottle-types"
+version = "0.1.0"
+description = ""
+authors = ["exthrempty <andrewsalt.e@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+pyhumps = "^3.0.2"
+pydantic = "^1.8.2"
+loguru = "^0.5.3"
+tottle = "^1.4"
+regex = "^2021.4.4"
+howdoi = "^2.0.16"
+isort = "^5.9.1"
+black = "^21.6b0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
