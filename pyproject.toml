@@ -11,12 +11,13 @@ pyhumps = "^3.0.2"
 pydantic = "^1.8.2"
 loguru = "^0.5.3"
 tottle = "^1.4"
-regex = "^2021.4.4"
+
+
+[tool.poetry.dev-dependencies]
 howdoi = "^2.0.16"
 isort = "^5.9.1"
 black = "^21.6b0"
 
-[tool.poetry.dev-dependencies]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
