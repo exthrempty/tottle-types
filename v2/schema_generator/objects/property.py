@@ -5,8 +5,8 @@ from humps import depascalize, pascalize
 from pydantic import BaseModel
 
 from v2.schema_generator.enums import CustomAPITypeEnum, TYPES_CONVERSION
-from v2.schema_generator.methods.any_of import AnyOf
-from v2.schema_generator.methods.array import Array
+from v2.schema_generator.any_of import AnyOf
+from v2.schema_generator.array import Array
 
 
 class Property(BaseModel):
