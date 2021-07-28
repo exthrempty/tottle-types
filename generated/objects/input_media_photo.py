@@ -5,7 +5,6 @@ import pydantic
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InputMediaPhoto(pydantic.BaseModel):
     """
     Represents a photo to be sent.
@@ -20,7 +19,6 @@ class InputMediaPhoto(pydantic.BaseModel):
     :param caption_entities: Optional. List of special entities that appear in the caption, which can be
     specified instead of parse_mode
     """
-    
     type: typing.Optional[str] = None
     media: typing.Optional[str] = None
     caption: typing.Optional[str] = None
@@ -28,4 +26,3 @@ class InputMediaPhoto(pydantic.BaseModel):
     caption_entities: typing.Optional[typing.List["MessageEntity"]] = None
     
     
-

@@ -6,7 +6,6 @@ from generated.objects.input_file import InputFile
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InputMediaVideo(pydantic.BaseModel):
     """
     Represents a video to be sent.
@@ -31,7 +30,6 @@ class InputMediaVideo(pydantic.BaseModel):
     :param duration: Optional. Video duration
     :param supports_streaming: Optional. Pass True, if the uploaded video is suitable for streaming
     """
-    
     type: typing.Optional[str] = None
     media: typing.Optional[str] = None
     thumb: typing.Optional[typing.Union["InputFile", str]] = None
@@ -44,4 +42,3 @@ class InputMediaVideo(pydantic.BaseModel):
     supports_streaming: typing.Optional[bool] = None
     
     
-

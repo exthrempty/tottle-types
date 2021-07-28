@@ -1,6 +1,5 @@
 {{ object.depends() | join("\n") | sort_imports }}
 
-
 class {{ object.name | pascalize }}(pydantic.BaseModel):
     """
     {{ object.description | unmarkdown | wrapped }}
@@ -8,7 +7,7 @@ class {{ object.name | pascalize }}(pydantic.BaseModel):
     :param {{ property.name }}: {{ property.description | unmarkdown | wrapped }}
     {% endfor -%}
     """
-    {% if object.properties %}
+    {% if object.properties -%}
     {% for property in object.properties -%}
     {{ property.render() }}
     {% endfor %}

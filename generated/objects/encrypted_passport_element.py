@@ -5,7 +5,6 @@ import pydantic
 from generated.objects.passport_file import PassportFile
 
 
-
 class EncryptedPassportElement(pydantic.BaseModel):
     """
     Contains information about documents or other Telegram Passport elements shared with
@@ -41,7 +40,6 @@ class EncryptedPassportElement(pydantic.BaseModel):
     and verified using the accompanying EncryptedCredentials.
     :param hash: Base64-encoded element hash for using in PassportElementErrorUnspecified
     """
-    
     type: typing.Optional[str] = None
     data: typing.Optional[str] = None
     phone_number: typing.Optional[str] = None
@@ -54,4 +52,3 @@ class EncryptedPassportElement(pydantic.BaseModel):
     hash: typing.Optional[str] = None
     
     
-

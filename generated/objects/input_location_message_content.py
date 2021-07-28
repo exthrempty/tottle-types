@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class InputLocationMessageContent(pydantic.BaseModel):
@@ -17,7 +18,6 @@ class InputLocationMessageContent(pydantic.BaseModel):
     approaching another chat member, in meters. Must be between 1 and 100000 if
     specified.
     """
-    
     latitude: typing.Optional[float] = None
     longitude: typing.Optional[float] = None
     horizontal_accuracy: typing.Optional[float] = None
@@ -26,4 +26,3 @@ class InputLocationMessageContent(pydantic.BaseModel):
     proximity_alert_radius: typing.Optional[int] = None
     
     
-

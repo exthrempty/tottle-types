@@ -3,7 +3,6 @@ import typing
 import pydantic
 
 
-
 class PassportElementErrorTranslationFiles(pydantic.BaseModel):
     """
     Represents an issue with the translated version of a document. The error is
@@ -16,11 +15,9 @@ class PassportElementErrorTranslationFiles(pydantic.BaseModel):
     :param file_hashes: List of base64-encoded file hashes
     :param message: Error message
     """
-    
     source: typing.Optional[str] = None
     type: typing.Optional[str] = None
     file_hashes: typing.Optional[typing.List[str]] = None
     message: typing.Optional[str] = None
     
     
-

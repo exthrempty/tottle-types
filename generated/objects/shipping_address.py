@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class ShippingAddress(pydantic.BaseModel):
@@ -12,7 +13,6 @@ class ShippingAddress(pydantic.BaseModel):
     :param street_line2: Second line for the address
     :param post_code: Address post code
     """
-    
     country_code: typing.Optional[str] = None
     state: typing.Optional[str] = None
     city: typing.Optional[str] = None
@@ -21,4 +21,3 @@ class ShippingAddress(pydantic.BaseModel):
     post_code: typing.Optional[str] = None
     
     
-

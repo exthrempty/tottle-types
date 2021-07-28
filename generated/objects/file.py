@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class File(pydantic.BaseModel):
@@ -15,11 +16,9 @@ class File(pydantic.BaseModel):
     :param file_path: Optional. File path. Use
     https://api.telegram.org/file/bot&lt;token&gt;/&lt;file_path&gt; to get the file.
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     file_size: typing.Optional[int] = None
     file_path: typing.Optional[str] = None
     
     
-

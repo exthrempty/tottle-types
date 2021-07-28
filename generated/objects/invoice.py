@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class Invoice(pydantic.BaseModel):
@@ -14,7 +15,6 @@ class Invoice(pydantic.BaseModel):
     currencies.json, it shows the number of digits past the decimal point for each
     currency (2 for the majority of currencies).
     """
-    
     title: typing.Optional[str] = None
     description: typing.Optional[str] = None
     start_parameter: typing.Optional[str] = None
@@ -22,4 +22,3 @@ class Invoice(pydantic.BaseModel):
     total_amount: typing.Optional[int] = None
     
     
-

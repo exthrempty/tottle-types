@@ -6,7 +6,6 @@ from generated.objects.input_file import InputFile
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InputMediaAudio(pydantic.BaseModel):
     """
     Represents an audio file to be treated as music to be sent.
@@ -30,7 +29,6 @@ class InputMediaAudio(pydantic.BaseModel):
     :param performer: Optional. Performer of the audio
     :param title: Optional. Title of the audio
     """
-    
     type: typing.Optional[str] = None
     media: typing.Optional[str] = None
     thumb: typing.Optional[typing.Union["InputFile", str]] = None
@@ -42,4 +40,3 @@ class InputMediaAudio(pydantic.BaseModel):
     title: typing.Optional[str] = None
     
     
-

@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class ReplyKeyboardRemove(pydantic.BaseModel):
@@ -19,9 +20,7 @@ class ReplyKeyboardRemove(pydantic.BaseModel):
     reply to the vote and removes the keyboard for that user, while still showing the
     keyboard with poll options to users who haven't voted yet.
     """
-    
     remove_keyboard: typing.Optional[bool] = None
     selective: typing.Optional[bool] = None
     
     
-

@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class ChatInviteLink(pydantic.BaseModel):
@@ -17,7 +18,6 @@ class ChatInviteLink(pydantic.BaseModel):
     :param member_limit: Optional. Maximum number of users that can be members of the chat simultaneously
     after joining the chat via this invite link; 1-99999
     """
-    
     invite_link: typing.Optional[str] = None
     creator: typing.Optional["User"] = None
     is_primary: typing.Optional[bool] = None
@@ -26,4 +26,3 @@ class ChatInviteLink(pydantic.BaseModel):
     member_limit: typing.Optional[int] = None
     
     
-

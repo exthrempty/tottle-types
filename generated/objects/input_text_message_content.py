@@ -5,7 +5,6 @@ import pydantic
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InputTextMessageContent(pydantic.BaseModel):
     """
     Represents the content of a text message to be sent as the result of an inline
@@ -17,11 +16,9 @@ class InputTextMessageContent(pydantic.BaseModel):
     specified instead of parse_mode
     :param disable_web_page_preview: Optional. Disables link previews for links in the sent message
     """
-    
     message_text: typing.Optional[str] = None
     parse_mode: typing.Optional[str] = None
     entities: typing.Optional[typing.List["MessageEntity"]] = None
     disable_web_page_preview: typing.Optional[bool] = None
     
     
-

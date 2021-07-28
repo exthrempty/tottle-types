@@ -34,7 +34,6 @@ from generated.objects.voice_chat_scheduled import VoiceChatScheduled
 from generated.objects.voice_chat_started import VoiceChatStarted
 
 
-
 class Message(pydantic.BaseModel):
     """
     This object represents a message.
@@ -131,7 +130,6 @@ class Message(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message. login_url buttons are represented
     as ordinary url buttons.
     """
-    
     message_id: typing.Optional[int] = None
     from_: typing.Optional["User"] = pydantic.Field(None, alias='from')
     sender_chat: typing.Optional["Chat"] = None
@@ -190,4 +188,3 @@ class Message(pydantic.BaseModel):
     reply_markup: typing.Optional["InlineKeyboardMarkup"] = None
     
     
-

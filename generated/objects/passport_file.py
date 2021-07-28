@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class PassportFile(pydantic.BaseModel):
@@ -12,11 +13,9 @@ class PassportFile(pydantic.BaseModel):
     :param file_size: File size
     :param file_date: Unix time when the file was uploaded
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     file_size: typing.Optional[int] = None
     file_date: typing.Optional[int] = None
     
     
-

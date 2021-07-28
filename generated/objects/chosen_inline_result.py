@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.location import Location
 from generated.objects.user import User
-
 
 
 class ChosenInlineResult(pydantic.BaseModel):
@@ -17,7 +18,6 @@ class ChosenInlineResult(pydantic.BaseModel):
     and can be used to edit the message.
     :param query: The query that was used to obtain the result
     """
-    
     result_id: typing.Optional[str] = None
     from_: typing.Optional["User"] = pydantic.Field(None, alias='from')
     location: typing.Optional["Location"] = None
@@ -25,4 +25,3 @@ class ChosenInlineResult(pydantic.BaseModel):
     query: typing.Optional[str] = None
     
     
-

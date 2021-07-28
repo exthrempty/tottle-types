@@ -6,7 +6,6 @@ from generated.objects.message_entity import MessageEntity
 from generated.objects.poll_option import PollOption
 
 
-
 class Poll(pydantic.BaseModel):
     """
     This object contains information about a poll.
@@ -28,7 +27,6 @@ class Poll(pydantic.BaseModel):
     :param open_period: Optional. Amount of time in seconds the poll will be active after creation
     :param close_date: Optional. Point in time (Unix timestamp) when the poll will be automatically closed
     """
-    
     id: typing.Optional[str] = None
     question: typing.Optional[str] = None
     options: typing.Optional[typing.List["PollOption"]] = None
@@ -44,4 +42,3 @@ class Poll(pydantic.BaseModel):
     close_date: typing.Optional[int] = None
     
     
-

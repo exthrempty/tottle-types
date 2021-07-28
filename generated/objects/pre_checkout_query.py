@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.order_info import OrderInfo
 from generated.objects.user import User
-
 
 
 class PreCheckoutQuery(pydantic.BaseModel):
@@ -19,7 +20,6 @@ class PreCheckoutQuery(pydantic.BaseModel):
     :param shipping_option_id: Optional. Identifier of the shipping option chosen by the user
     :param order_info: Optional. Order info provided by the user
     """
-    
     id: typing.Optional[str] = None
     from_: typing.Optional["User"] = pydantic.Field(None, alias='from')
     currency: typing.Optional[str] = None
@@ -29,4 +29,3 @@ class PreCheckoutQuery(pydantic.BaseModel):
     order_info: typing.Optional["OrderInfo"] = None
     
     
-

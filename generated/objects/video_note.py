@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.photo_size import PhotoSize
-
 
 
 class VideoNote(pydantic.BaseModel):
@@ -15,7 +16,6 @@ class VideoNote(pydantic.BaseModel):
     :param thumb: Optional. Video thumbnail
     :param file_size: Optional. File size
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     length: typing.Optional[int] = None
@@ -24,4 +24,3 @@ class VideoNote(pydantic.BaseModel):
     file_size: typing.Optional[int] = None
     
     
-

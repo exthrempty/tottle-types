@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.mask_position import MaskPosition
 from generated.objects.photo_size import PhotoSize
-
 
 
 class Sticker(pydantic.BaseModel):
@@ -20,7 +21,6 @@ class Sticker(pydantic.BaseModel):
     :param mask_position: Optional. For mask stickers, the position where the mask should be placed
     :param file_size: Optional. File size
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     width: typing.Optional[int] = None
@@ -33,4 +33,3 @@ class Sticker(pydantic.BaseModel):
     file_size: typing.Optional[int] = None
     
     
-

@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class PassportElementErrorUnspecified(pydantic.BaseModel):
@@ -11,11 +12,9 @@ class PassportElementErrorUnspecified(pydantic.BaseModel):
     :param element_hash: Base64-encoded element hash
     :param message: Error message
     """
-    
     source: typing.Optional[str] = None
     type: typing.Optional[str] = None
     element_hash: typing.Optional[str] = None
     message: typing.Optional[str] = None
     
     
-

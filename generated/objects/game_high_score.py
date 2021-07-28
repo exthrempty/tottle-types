@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class GameHighScore(pydantic.BaseModel):
@@ -11,10 +12,8 @@ class GameHighScore(pydantic.BaseModel):
     :param user: User
     :param score: Score
     """
-    
     position: typing.Optional[int] = None
     user: typing.Optional["User"] = None
     score: typing.Optional[int] = None
     
     
-

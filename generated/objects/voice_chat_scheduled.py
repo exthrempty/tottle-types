@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class VoiceChatScheduled(pydantic.BaseModel):
@@ -8,8 +9,6 @@ class VoiceChatScheduled(pydantic.BaseModel):
     :param start_date: Point in time (Unix timestamp) when the voice chat is supposed to be started by a
     chat administrator
     """
-    
     start_date: typing.Optional[int] = None
     
     
-

@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class KeyboardButtonPollType(pydantic.BaseModel):
@@ -10,8 +11,6 @@ class KeyboardButtonPollType(pydantic.BaseModel):
     quiz mode. If regular is passed, only regular polls will be allowed. Otherwise, the
     user will be allowed to create a poll of any type.
     """
-    
     type: typing.Optional[str] = None
     
     
-

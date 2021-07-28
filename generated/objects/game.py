@@ -7,7 +7,6 @@ from generated.objects.message_entity import MessageEntity
 from generated.objects.photo_size import PhotoSize
 
 
-
 class Game(pydantic.BaseModel):
     """
     This object represents a game. Use BotFather to create and edit games, their short
@@ -23,7 +22,6 @@ class Game(pydantic.BaseModel):
     :param animation: Optional. Animation that will be displayed in the game message in chats. Upload via
     BotFather
     """
-    
     title: typing.Optional[str] = None
     description: typing.Optional[str] = None
     photo: typing.Optional[typing.List["PhotoSize"]] = None
@@ -32,4 +30,3 @@ class Game(pydantic.BaseModel):
     animation: typing.Optional["Animation"] = None
     
     
-

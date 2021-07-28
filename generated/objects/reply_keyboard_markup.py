@@ -5,7 +5,6 @@ import pydantic
 from generated.objects.keyboard_button import KeyboardButton
 
 
-
 class ReplyKeyboardMarkup(pydantic.BaseModel):
     """
     This object represents a custom keyboard with reply options (see Introduction to
@@ -28,7 +27,6 @@ class ReplyKeyboardMarkup(pydantic.BaseModel):
     request with a keyboard to select the new language. Other users in the group don't
     see the keyboard.
     """
-    
     keyboard: typing.Optional[typing.List[typing.List["KeyboardButton"]]] = None
     resize_keyboard: typing.Optional[bool] = None
     one_time_keyboard: typing.Optional[bool] = None
@@ -36,4 +34,3 @@ class ReplyKeyboardMarkup(pydantic.BaseModel):
     selective: typing.Optional[bool] = None
     
     
-

@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class PassportElementErrorReverseSide(pydantic.BaseModel):
@@ -12,11 +13,9 @@ class PassportElementErrorReverseSide(pydantic.BaseModel):
     :param file_hash: Base64-encoded hash of the file with the reverse side of the document
     :param message: Error message
     """
-    
     source: typing.Optional[str] = None
     type: typing.Optional[str] = None
     file_hash: typing.Optional[str] = None
     message: typing.Optional[str] = None
     
     
-

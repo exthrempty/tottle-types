@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.keyboard_button_poll_type import KeyboardButtonPollType
-
 
 
 class KeyboardButton(pydantic.BaseModel):
@@ -18,11 +19,9 @@ class KeyboardButton(pydantic.BaseModel):
     :param request_poll: Optional. If specified, the user will be asked to create a poll and send it to the
     bot when the button is pressed. Available in private chats only
     """
-    
     text: typing.Optional[str] = None
     request_contact: typing.Optional[bool] = None
     request_location: typing.Optional[bool] = None
     request_poll: typing.Optional["KeyboardButtonPollType"] = None
     
     
-

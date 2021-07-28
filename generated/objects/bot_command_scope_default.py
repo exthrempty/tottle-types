@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class BotCommandScopeDefault(pydantic.BaseModel):
@@ -8,8 +9,6 @@ class BotCommandScopeDefault(pydantic.BaseModel):
     commands with a narrower scope are specified for the user.
     :param type: Scope type, must be default
     """
-    
     type: typing.Optional[str] = None
     
     
-

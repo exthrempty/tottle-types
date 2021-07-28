@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultMpeg4Gif(pydantic.BaseModel):
     """
     Represents a link to a video animation (H.264/MPEG-4 AVC video without sound). By
@@ -33,7 +32,6 @@ class InlineQueryResultMpeg4Gif(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message
     :param input_message_content: Optional. Content of the message to be sent instead of the video animation
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     mpeg4_url: typing.Optional[str] = None
@@ -50,4 +48,3 @@ class InlineQueryResultMpeg4Gif(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

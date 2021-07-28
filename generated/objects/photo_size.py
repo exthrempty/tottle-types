@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class PhotoSize(pydantic.BaseModel):
@@ -12,7 +13,6 @@ class PhotoSize(pydantic.BaseModel):
     :param height: Photo height
     :param file_size: Optional. File size
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     width: typing.Optional[int] = None
@@ -20,4 +20,3 @@ class PhotoSize(pydantic.BaseModel):
     file_size: typing.Optional[int] = None
     
     
-

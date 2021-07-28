@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class PassportElementErrorFile(pydantic.BaseModel):
@@ -13,11 +14,9 @@ class PassportElementErrorFile(pydantic.BaseModel):
     :param file_hash: Base64-encoded file hash
     :param message: Error message
     """
-    
     source: typing.Optional[str] = None
     type: typing.Optional[str] = None
     file_hash: typing.Optional[str] = None
     message: typing.Optional[str] = None
     
     
-

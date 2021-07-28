@@ -1,7 +1,6 @@
 import pydantic
 
 
-
 class ChatMember(pydantic.BaseModel):
     """
     This object contains information about one member of a chat. Currently, the
@@ -9,4 +8,3 @@ class ChatMember(pydantic.BaseModel):
     """
     pass
     
-

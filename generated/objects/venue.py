@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.location import Location
-
 
 
 class Venue(pydantic.BaseModel):
@@ -16,7 +17,6 @@ class Venue(pydantic.BaseModel):
     :param google_place_id: Optional. Google Places identifier of the venue
     :param google_place_type: Optional. Google Places type of the venue. (See supported types.)
     """
-    
     location: typing.Optional["Location"] = None
     title: typing.Optional[str] = None
     address: typing.Optional[str] = None
@@ -26,4 +26,3 @@ class Venue(pydantic.BaseModel):
     google_place_type: typing.Optional[str] = None
     
     
-

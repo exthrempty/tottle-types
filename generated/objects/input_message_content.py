@@ -1,7 +1,6 @@
 import pydantic
 
 
-
 class InputMessageContent(pydantic.BaseModel):
     """
     This object represents the content of a message to be sent as a result of an inline
@@ -9,4 +8,3 @@ class InputMessageContent(pydantic.BaseModel):
     """
     pass
     
-

@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.inline_keyboard_markup import InlineKeyboardMarkup
 from generated.objects.input_message_content import InputMessageContent
-
 
 
 class InlineQueryResultContact(pydantic.BaseModel):
@@ -22,7 +23,6 @@ class InlineQueryResultContact(pydantic.BaseModel):
     :param thumb_width: Optional. Thumbnail width
     :param thumb_height: Optional. Thumbnail height
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     phone_number: typing.Optional[str] = None
@@ -36,4 +36,3 @@ class InlineQueryResultContact(pydantic.BaseModel):
     thumb_height: typing.Optional[int] = None
     
     
-

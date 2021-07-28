@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class MaskPosition(pydantic.BaseModel):
@@ -15,11 +16,9 @@ class MaskPosition(pydantic.BaseModel):
     bottom. For example, 1.0 will place the mask just below the default mask position.
     :param scale: Mask scaling coefficient. For example, 2.0 means double size.
     """
-    
     point: typing.Optional[str] = None
     x_shift: typing.Optional[float] = None
     y_shift: typing.Optional[float] = None
     scale: typing.Optional[float] = None
     
     
-

@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.callback_game import CallbackGame
 from generated.objects.login_url import LoginUrl
-
 
 
 class InlineKeyboardButton(pydantic.BaseModel):
@@ -33,7 +34,6 @@ class InlineKeyboardButton(pydantic.BaseModel):
     :param pay: Optional. Specify True, to send a Pay button.   NOTE: This type of button must
     always be the first button in the first row.
     """
-    
     text: typing.Optional[str] = None
     url: typing.Optional[str] = None
     login_url: typing.Optional["LoginUrl"] = None
@@ -44,4 +44,3 @@ class InlineKeyboardButton(pydantic.BaseModel):
     pay: typing.Optional[bool] = None
     
     
-

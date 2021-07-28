@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class ChatPermissions(pydantic.BaseModel):
@@ -20,7 +21,6 @@ class ChatPermissions(pydantic.BaseModel):
     :param can_pin_messages: Optional. True, if the user is allowed to pin messages. Ignored in public
     supergroups
     """
-    
     can_send_messages: typing.Optional[bool] = None
     can_send_media_messages: typing.Optional[bool] = None
     can_send_polls: typing.Optional[bool] = None
@@ -31,4 +31,3 @@ class ChatPermissions(pydantic.BaseModel):
     can_pin_messages: typing.Optional[bool] = None
     
     
-

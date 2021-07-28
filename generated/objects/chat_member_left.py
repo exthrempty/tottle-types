@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class ChatMemberLeft(pydantic.BaseModel):
@@ -11,9 +12,7 @@ class ChatMemberLeft(pydantic.BaseModel):
     :param status: The member's status in the chat, always “left”
     :param user: Information about the user
     """
-    
     status: typing.Optional[str] = None
     user: typing.Optional["User"] = None
     
     
-

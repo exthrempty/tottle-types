@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class BotCommand(pydantic.BaseModel):
@@ -9,9 +10,7 @@ class BotCommand(pydantic.BaseModel):
     digits and underscores.
     :param description: Description of the command, 3-256 characters.
     """
-    
     command: typing.Optional[str] = None
     description: typing.Optional[str] = None
     
     
-

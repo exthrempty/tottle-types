@@ -1,7 +1,6 @@
 import pydantic
 
 
-
 class PassportElementError(pydantic.BaseModel):
     """
     This object represents an error in the Telegram Passport element which was submitted
@@ -9,4 +8,3 @@ class PassportElementError(pydantic.BaseModel):
     """
     pass
     
-

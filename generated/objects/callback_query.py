@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.message import Message
 from generated.objects.user import User
-
 
 
 class CallbackQuery(pydantic.BaseModel):
@@ -25,7 +26,6 @@ class CallbackQuery(pydantic.BaseModel):
     :param game_short_name: Optional. Short name of a Game to be returned, serves as the unique identifier for
     the game
     """
-    
     id: typing.Optional[str] = None
     from_: typing.Optional["User"] = pydantic.Field(None, alias='from')
     message: typing.Optional["Message"] = None
@@ -35,4 +35,3 @@ class CallbackQuery(pydantic.BaseModel):
     game_short_name: typing.Optional[str] = None
     
     
-

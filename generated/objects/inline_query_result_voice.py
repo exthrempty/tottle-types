@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultVoice(pydantic.BaseModel):
     """
     Represents a link to a voice recording in an .OGG container encoded with OPUS. By
@@ -27,7 +26,6 @@ class InlineQueryResultVoice(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message
     :param input_message_content: Optional. Content of the message to be sent instead of the voice recording
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     voice_url: typing.Optional[str] = None
@@ -40,4 +38,3 @@ class InlineQueryResultVoice(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

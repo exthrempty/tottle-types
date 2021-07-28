@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class Dice(pydantic.BaseModel):
@@ -9,9 +10,7 @@ class Dice(pydantic.BaseModel):
     :param value: Value of the dice, 1-6 for “🎲”, “🎯” and “🎳” base emoji, 1-5 for “🏀” and “⚽” base
     emoji, 1-64 for “🎰” base emoji
     """
-    
     emoji: typing.Optional[str] = None
     value: typing.Optional[int] = None
     
     
-

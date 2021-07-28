@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.photo_size import PhotoSize
-
 
 
 class Document(pydantic.BaseModel):
@@ -16,7 +17,6 @@ class Document(pydantic.BaseModel):
     :param mime_type: Optional. MIME type of the file as defined by sender
     :param file_size: Optional. File size
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     thumb: typing.Optional["PhotoSize"] = None
@@ -25,4 +25,3 @@ class Document(pydantic.BaseModel):
     file_size: typing.Optional[int] = None
     
     
-

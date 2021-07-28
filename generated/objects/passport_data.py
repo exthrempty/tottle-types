@@ -7,7 +7,6 @@ from generated.objects.encrypted_passport_element import \
     EncryptedPassportElement
 
 
-
 class PassportData(pydantic.BaseModel):
     """
     Contains information about Telegram Passport data shared with the bot by the user.
@@ -15,9 +14,7 @@ class PassportData(pydantic.BaseModel):
     shared with the bot
     :param credentials: Encrypted credentials required to decrypt the data
     """
-    
     data: typing.Optional[typing.List["EncryptedPassportElement"]] = None
     credentials: typing.Optional["EncryptedCredentials"] = None
     
     
-

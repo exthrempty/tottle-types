@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tottle-types"
-version = "3.0.1"
+version = "3.0.2"
 description = "Quick but powerful way to generate code from Telegram API Schema"
 authors = ["exthrempty <andrewsalt.e@gmail.com>"]
 

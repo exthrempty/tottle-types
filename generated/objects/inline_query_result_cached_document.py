@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultCachedDocument(pydantic.BaseModel):
     """
     Represents a link to a file stored on the Telegram servers. By default, this file
@@ -28,7 +27,6 @@ class InlineQueryResultCachedDocument(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message
     :param input_message_content: Optional. Content of the message to be sent instead of the file
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     title: typing.Optional[str] = None
@@ -41,4 +39,3 @@ class InlineQueryResultCachedDocument(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

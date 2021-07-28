@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class ChatMemberRestricted(pydantic.BaseModel):
@@ -23,7 +24,6 @@ class ChatMemberRestricted(pydantic.BaseModel):
     :param until_date: Date when restrictions will be lifted for this user; unix time. If 0, then the user
     is restricted forever
     """
-    
     status: typing.Optional[str] = None
     user: typing.Optional["User"] = None
     is_member: typing.Optional[bool] = None
@@ -38,4 +38,3 @@ class ChatMemberRestricted(pydantic.BaseModel):
     until_date: typing.Optional[int] = None
     
     
-

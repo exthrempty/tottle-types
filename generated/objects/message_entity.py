@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class MessageEntity(pydantic.BaseModel):
@@ -20,7 +21,6 @@ class MessageEntity(pydantic.BaseModel):
     :param user: Optional. For “text_mention” only, the mentioned user
     :param language: Optional. For “pre” only, the programming language of the entity text
     """
-    
     type: typing.Optional[str] = None
     offset: typing.Optional[int] = None
     length: typing.Optional[int] = None
@@ -29,4 +29,3 @@ class MessageEntity(pydantic.BaseModel):
     language: typing.Optional[str] = None
     
     
-

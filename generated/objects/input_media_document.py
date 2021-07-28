@@ -6,7 +6,6 @@ from generated.objects.input_file import InputFile
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InputMediaDocument(pydantic.BaseModel):
     """
     Represents a general file to be sent.
@@ -30,7 +29,6 @@ class InputMediaDocument(pydantic.BaseModel):
     :param disable_content_type_detection: Optional. Disables automatic server-side content type detection for files uploaded
     using multipart/form-data. Always true, if the document is sent as part of an album.
     """
-    
     type: typing.Optional[str] = None
     media: typing.Optional[str] = None
     thumb: typing.Optional[typing.Union["InputFile", str]] = None
@@ -40,4 +38,3 @@ class InputMediaDocument(pydantic.BaseModel):
     disable_content_type_detection: typing.Optional[bool] = None
     
     
-

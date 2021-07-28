@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class LabeledPrice(pydantic.BaseModel):
@@ -11,9 +12,7 @@ class LabeledPrice(pydantic.BaseModel):
     parameter in currencies.json, it shows the number of digits past the decimal point
     for each currency (2 for the majority of currencies).
     """
-    
     label: typing.Optional[str] = None
     amount: typing.Optional[int] = None
     
     
-

@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class ResponseParameters(pydantic.BaseModel):
@@ -13,9 +14,7 @@ class ResponseParameters(pydantic.BaseModel):
     :param retry_after: Optional. In case of exceeding flood control, the number of seconds left to wait
     before the request can be repeated
     """
-    
     migrate_to_chat_id: typing.Optional[int] = None
     retry_after: typing.Optional[int] = None
     
     
-

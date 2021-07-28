@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class BotCommandScopeAllChatAdministrators(pydantic.BaseModel):
@@ -8,8 +9,6 @@ class BotCommandScopeAllChatAdministrators(pydantic.BaseModel):
     administrators.
     :param type: Scope type, must be all_chat_administrators
     """
-    
     type: typing.Optional[str] = None
     
     
-

@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.inline_keyboard_markup import InlineKeyboardMarkup
 from generated.objects.input_message_content import InputMessageContent
-
 
 
 class InlineQueryResultCachedSticker(pydantic.BaseModel):
@@ -16,7 +17,6 @@ class InlineQueryResultCachedSticker(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message
     :param input_message_content: Optional. Content of the message to be sent instead of the sticker
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     sticker_file_id: typing.Optional[str] = None
@@ -24,4 +24,3 @@ class InlineQueryResultCachedSticker(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

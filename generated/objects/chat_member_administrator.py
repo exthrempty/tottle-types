@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class ChatMemberAdministrator(pydantic.BaseModel):
@@ -28,7 +29,6 @@ class ChatMemberAdministrator(pydantic.BaseModel):
     :param can_pin_messages: Optional. True, if the user is allowed to pin messages; groups and supergroups only
     :param custom_title: Optional. Custom title for this user
     """
-    
     status: typing.Optional[str] = None
     user: typing.Optional["User"] = None
     can_be_edited: typing.Optional[bool] = None
@@ -46,4 +46,3 @@ class ChatMemberAdministrator(pydantic.BaseModel):
     custom_title: typing.Optional[str] = None
     
     
-

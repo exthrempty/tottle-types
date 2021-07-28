@@ -6,7 +6,6 @@ from generated.objects.photo_size import PhotoSize
 from generated.objects.sticker import Sticker
 
 
-
 class StickerSet(pydantic.BaseModel):
     """
     This object represents a sticker set.
@@ -17,7 +16,6 @@ class StickerSet(pydantic.BaseModel):
     :param stickers: List of all set stickers
     :param thumb: Optional. Sticker set thumbnail in the .WEBP or .TGS format
     """
-    
     name: typing.Optional[str] = None
     title: typing.Optional[str] = None
     is_animated: typing.Optional[bool] = None
@@ -26,4 +24,3 @@ class StickerSet(pydantic.BaseModel):
     thumb: typing.Optional["PhotoSize"] = None
     
     
-

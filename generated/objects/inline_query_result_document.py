@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultDocument(pydantic.BaseModel):
     """
     Represents a link to a file. By default, this file will be sent by the user with an
@@ -32,7 +31,6 @@ class InlineQueryResultDocument(pydantic.BaseModel):
     :param thumb_width: Optional. Thumbnail width
     :param thumb_height: Optional. Thumbnail height
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     title: typing.Optional[str] = None
@@ -49,4 +47,3 @@ class InlineQueryResultDocument(pydantic.BaseModel):
     thumb_height: typing.Optional[int] = None
     
     
-

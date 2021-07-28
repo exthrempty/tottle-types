@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class MessageAutoDeleteTimerChanged(pydantic.BaseModel):
@@ -8,8 +9,6 @@ class MessageAutoDeleteTimerChanged(pydantic.BaseModel):
     settings.
     :param message_auto_delete_time: New auto-delete time for messages in the chat
     """
-    
     message_auto_delete_time: typing.Optional[int] = None
     
     
-

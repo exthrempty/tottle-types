@@ -3,7 +3,6 @@ import typing
 import pydantic
 
 
-
 class PassportElementErrorFiles(pydantic.BaseModel):
     """
     Represents an issue with a list of scans. The error is considered resolved when the
@@ -15,11 +14,9 @@ class PassportElementErrorFiles(pydantic.BaseModel):
     :param file_hashes: List of base64-encoded file hashes
     :param message: Error message
     """
-    
     source: typing.Optional[str] = None
     type: typing.Optional[str] = None
     file_hashes: typing.Optional[typing.List[str]] = None
     message: typing.Optional[str] = None
     
     
-

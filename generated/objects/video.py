@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.photo_size import PhotoSize
-
 
 
 class Video(pydantic.BaseModel):
@@ -18,7 +19,6 @@ class Video(pydantic.BaseModel):
     :param mime_type: Optional. Mime type of a file as defined by sender
     :param file_size: Optional. File size
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     width: typing.Optional[int] = None
@@ -30,4 +30,3 @@ class Video(pydantic.BaseModel):
     file_size: typing.Optional[int] = None
     
     
-

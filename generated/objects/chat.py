@@ -1,10 +1,11 @@
+import typing
+
 import pydantic
 
 from generated.objects.chat_location import ChatLocation
 from generated.objects.chat_permissions import ChatPermissions
 from generated.objects.chat_photo import ChatPhoto
 from generated.objects.message import Message
-
 
 
 class Chat(pydantic.BaseModel):
@@ -45,7 +46,6 @@ class Chat(pydantic.BaseModel):
     :param location: Optional. For supergroups, the location to which the supergroup is connected.
     Returned only in getChat.
     """
-    
     id: typing.Optional[int] = None
     type: typing.Optional[str] = None
     title: typing.Optional[str] = None
@@ -66,4 +66,3 @@ class Chat(pydantic.BaseModel):
     location: typing.Optional["ChatLocation"] = None
     
     
-

@@ -5,7 +5,6 @@ import pydantic
 from generated.objects.labeled_price import LabeledPrice
 
 
-
 class InputInvoiceMessageContent(pydantic.BaseModel):
     """
     Represents the content of an invoice message to be sent as the result of an inline
@@ -45,7 +44,6 @@ class InputInvoiceMessageContent(pydantic.BaseModel):
     :param send_email_to_provider: Optional. Pass True, if user's email address should be sent to provider
     :param is_flexible: Optional. Pass True, if the final price depends on the shipping method
     """
-    
     title: typing.Optional[str] = None
     description: typing.Optional[str] = None
     payload: typing.Optional[str] = None
@@ -68,4 +66,3 @@ class InputInvoiceMessageContent(pydantic.BaseModel):
     is_flexible: typing.Optional[bool] = None
     
     
-

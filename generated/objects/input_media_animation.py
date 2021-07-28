@@ -6,7 +6,6 @@ from generated.objects.input_file import InputFile
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InputMediaAnimation(pydantic.BaseModel):
     """
     Represents an animation file (GIF or H.264/MPEG-4 AVC video without sound) to be
@@ -32,7 +31,6 @@ class InputMediaAnimation(pydantic.BaseModel):
     :param height: Optional. Animation height
     :param duration: Optional. Animation duration
     """
-    
     type: typing.Optional[str] = None
     media: typing.Optional[str] = None
     thumb: typing.Optional[typing.Union["InputFile", str]] = None
@@ -44,4 +42,3 @@ class InputMediaAnimation(pydantic.BaseModel):
     duration: typing.Optional[int] = None
     
     
-

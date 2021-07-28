@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultGif(pydantic.BaseModel):
     """
     Represents a link to an animated GIF file. By default, this animated GIF file will
@@ -33,7 +32,6 @@ class InlineQueryResultGif(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message
     :param input_message_content: Optional. Content of the message to be sent instead of the GIF animation
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     gif_url: typing.Optional[str] = None
@@ -50,4 +48,3 @@ class InlineQueryResultGif(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

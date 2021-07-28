@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultVideo(pydantic.BaseModel):
     """
     Represents a link to a page containing an embedded video player or a video file. By
@@ -36,7 +35,6 @@ class InlineQueryResultVideo(pydantic.BaseModel):
     required if InlineQueryResultVideo is used to send an HTML-page as a result (e.g., a
     YouTube video).
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     video_url: typing.Optional[str] = None
@@ -54,4 +52,3 @@ class InlineQueryResultVideo(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

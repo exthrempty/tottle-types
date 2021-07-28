@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class Voice(pydantic.BaseModel):
@@ -12,7 +13,6 @@ class Voice(pydantic.BaseModel):
     :param mime_type: Optional. MIME type of the file as defined by sender
     :param file_size: Optional. File size
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     duration: typing.Optional[int] = None
@@ -20,4 +20,3 @@ class Voice(pydantic.BaseModel):
     file_size: typing.Optional[int] = None
     
     
-

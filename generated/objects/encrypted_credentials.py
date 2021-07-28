@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class EncryptedCredentials(pydantic.BaseModel):
@@ -14,10 +15,8 @@ class EncryptedCredentials(pydantic.BaseModel):
     :param secret: Base64-encoded secret, encrypted with the bot's public RSA key, required for data
     decryption
     """
-    
     data: typing.Optional[str] = None
     hash: typing.Optional[str] = None
     secret: typing.Optional[str] = None
     
     
-

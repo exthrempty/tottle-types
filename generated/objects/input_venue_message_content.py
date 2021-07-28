@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class InputVenueMessageContent(pydantic.BaseModel):
@@ -16,7 +17,6 @@ class InputVenueMessageContent(pydantic.BaseModel):
     :param google_place_id: Optional. Google Places identifier of the venue
     :param google_place_type: Optional. Google Places type of the venue. (See supported types.)
     """
-    
     latitude: typing.Optional[float] = None
     longitude: typing.Optional[float] = None
     title: typing.Optional[str] = None
@@ -27,4 +27,3 @@ class InputVenueMessageContent(pydantic.BaseModel):
     google_place_type: typing.Optional[str] = None
     
     
-

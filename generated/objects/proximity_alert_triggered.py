@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class ProximityAlertTriggered(pydantic.BaseModel):
@@ -12,10 +13,8 @@ class ProximityAlertTriggered(pydantic.BaseModel):
     :param watcher: User that set the alert
     :param distance: The distance between the users
     """
-    
     traveler: typing.Optional["User"] = None
     watcher: typing.Optional["User"] = None
     distance: typing.Optional[int] = None
     
     
-

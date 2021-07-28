@@ -1,7 +1,6 @@
 import pydantic
 
 
-
 class InlineQueryResult(pydantic.BaseModel):
     """
     This object represents one result of an inline query. Telegram clients currently
@@ -9,4 +8,3 @@ class InlineQueryResult(pydantic.BaseModel):
     """
     pass
     
-

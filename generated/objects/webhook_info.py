@@ -3,7 +3,6 @@ import typing
 import pydantic
 
 
-
 class WebhookInfo(pydantic.BaseModel):
     """
     Contains information about the current status of a webhook.
@@ -20,7 +19,6 @@ class WebhookInfo(pydantic.BaseModel):
     :param allowed_updates: Optional. A list of update types the bot is subscribed to. Defaults to all update
     types except chat_member
     """
-    
     url: typing.Optional[str] = None
     has_custom_certificate: typing.Optional[bool] = None
     pending_update_count: typing.Optional[int] = None
@@ -31,4 +29,3 @@ class WebhookInfo(pydantic.BaseModel):
     allowed_updates: typing.Optional[typing.List[str]] = None
     
     
-

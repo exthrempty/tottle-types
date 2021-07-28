@@ -3,7 +3,6 @@ import typing
 import pydantic
 
 
-
 class BotCommandScopeChatMember(pydantic.BaseModel):
     """
     Represents the scope of bot commands, covering a specific member of a group or
@@ -13,10 +12,8 @@ class BotCommandScopeChatMember(pydantic.BaseModel):
     format @supergroupusername)
     :param user_id: Unique identifier of the target user
     """
-    
     type: typing.Optional[str] = None
     chat_id: typing.Optional[typing.Union[int, str]] = None
     user_id: typing.Optional[int] = None
     
     
-

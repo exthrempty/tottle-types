@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class Contact(pydantic.BaseModel):
@@ -14,7 +15,6 @@ class Contact(pydantic.BaseModel):
     double-precision float type are safe for storing this identifier.
     :param vcard: Optional. Additional data about the contact in the form of a vCard
     """
-    
     phone_number: typing.Optional[str] = None
     first_name: typing.Optional[str] = None
     last_name: typing.Optional[str] = None
@@ -22,4 +22,3 @@ class Contact(pydantic.BaseModel):
     vcard: typing.Optional[str] = None
     
     
-

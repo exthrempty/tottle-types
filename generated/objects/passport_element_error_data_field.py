@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class PassportElementErrorDataField(pydantic.BaseModel):
@@ -14,7 +15,6 @@ class PassportElementErrorDataField(pydantic.BaseModel):
     :param data_hash: Base64-encoded data hash
     :param message: Error message
     """
-    
     source: typing.Optional[str] = None
     type: typing.Optional[str] = None
     field_name: typing.Optional[str] = None
@@ -22,4 +22,3 @@ class PassportElementErrorDataField(pydantic.BaseModel):
     message: typing.Optional[str] = None
     
     
-

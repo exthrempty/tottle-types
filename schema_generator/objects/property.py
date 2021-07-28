@@ -33,6 +33,7 @@ class Property(BaseModel):
         elif self.type == CustomAPITypeEnum.REFERENCE:
             import_strings_set.add(self.reference.depends())
 
+        import_strings_set.add("import typing")
         return import_strings_set
 
     def render(self) -> str:

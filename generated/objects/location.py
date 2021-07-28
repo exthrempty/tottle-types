@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class Location(pydantic.BaseModel):
@@ -15,7 +16,6 @@ class Location(pydantic.BaseModel):
     :param proximity_alert_radius: Optional. Maximum distance for proximity alerts about approaching another chat
     member, in meters. For sent live locations only.
     """
-    
     longitude: typing.Optional[float] = None
     latitude: typing.Optional[float] = None
     horizontal_accuracy: typing.Optional[float] = None
@@ -24,4 +24,3 @@ class Location(pydantic.BaseModel):
     proximity_alert_radius: typing.Optional[int] = None
     
     
-

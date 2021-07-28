@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.location import Location
 from generated.objects.user import User
-
 
 
 class InlineQuery(pydantic.BaseModel):
@@ -20,7 +21,6 @@ class InlineQuery(pydantic.BaseModel):
     a secret chat
     :param location: Optional. Sender location, only for bots that request user location
     """
-    
     id: typing.Optional[str] = None
     from_: typing.Optional["User"] = pydantic.Field(None, alias='from')
     query: typing.Optional[str] = None
@@ -29,4 +29,3 @@ class InlineQuery(pydantic.BaseModel):
     location: typing.Optional["Location"] = None
     
     
-

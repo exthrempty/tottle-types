@@ -1,3 +1,5 @@
+import typing
+
 import pydantic
 
 from generated.objects.callback_query import CallbackQuery
@@ -9,7 +11,6 @@ from generated.objects.poll import Poll
 from generated.objects.poll_answer import PollAnswer
 from generated.objects.pre_checkout_query import PreCheckoutQuery
 from generated.objects.shipping_query import ShippingQuery
-
 
 
 class Update(pydantic.BaseModel):
@@ -43,7 +44,6 @@ class Update(pydantic.BaseModel):
     administrator in the chat and must explicitly specify “chat_member” in the list of
     allowed_updates to receive these updates.
     """
-    
     update_id: typing.Optional[int] = None
     message: typing.Optional["Message"] = None
     edited_message: typing.Optional["Message"] = None
@@ -60,4 +60,3 @@ class Update(pydantic.BaseModel):
     chat_member: typing.Optional["ChatMemberUpdated"] = None
     
     
-

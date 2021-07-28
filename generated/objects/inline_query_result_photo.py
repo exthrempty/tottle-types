@@ -7,7 +7,6 @@ from generated.objects.input_message_content import InputMessageContent
 from generated.objects.message_entity import MessageEntity
 
 
-
 class InlineQueryResultPhoto(pydantic.BaseModel):
     """
     Represents a link to a photo. By default, this photo will be sent by the user with
@@ -30,7 +29,6 @@ class InlineQueryResultPhoto(pydantic.BaseModel):
     :param reply_markup: Optional. Inline keyboard attached to the message
     :param input_message_content: Optional. Content of the message to be sent instead of the photo
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     photo_url: typing.Optional[str] = None
@@ -46,4 +44,3 @@ class InlineQueryResultPhoto(pydantic.BaseModel):
     input_message_content: typing.Optional["InputMessageContent"] = None
     
     
-

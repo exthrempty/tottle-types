@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.order_info import OrderInfo
-
 
 
 class SuccessfulPayment(pydantic.BaseModel):
@@ -18,7 +19,6 @@ class SuccessfulPayment(pydantic.BaseModel):
     :param telegram_payment_charge_id: Telegram payment identifier
     :param provider_payment_charge_id: Provider payment identifier
     """
-    
     currency: typing.Optional[str] = None
     total_amount: typing.Optional[int] = None
     invoice_payload: typing.Optional[str] = None
@@ -28,4 +28,3 @@ class SuccessfulPayment(pydantic.BaseModel):
     provider_payment_charge_id: typing.Optional[str] = None
     
     
-

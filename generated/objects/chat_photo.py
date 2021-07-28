@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class ChatPhoto(pydantic.BaseModel):
@@ -14,11 +15,9 @@ class ChatPhoto(pydantic.BaseModel):
     :param big_file_unique_id: Unique file identifier of big (640x640) chat photo, which is supposed to be the same
     over time and for different bots. Can't be used to download or reuse the file.
     """
-    
     small_file_id: typing.Optional[str] = None
     small_file_unique_id: typing.Optional[str] = None
     big_file_id: typing.Optional[str] = None
     big_file_unique_id: typing.Optional[str] = None
     
     
-

@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.user import User
-
 
 
 class ChatMemberOwner(pydantic.BaseModel):
@@ -12,11 +13,9 @@ class ChatMemberOwner(pydantic.BaseModel):
     :param is_anonymous: True, if the user's presence in the chat is hidden
     :param custom_title: Optional. Custom title for this user
     """
-    
     status: typing.Optional[str] = None
     user: typing.Optional["User"] = None
     is_anonymous: typing.Optional[bool] = None
     custom_title: typing.Optional[str] = None
     
     
-

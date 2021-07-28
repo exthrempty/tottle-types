@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class User(pydantic.BaseModel):
@@ -18,7 +19,6 @@ class User(pydantic.BaseModel):
     :param can_read_all_group_messages: Optional. True, if privacy mode is disabled for the bot. Returned only in getMe.
     :param supports_inline_queries: Optional. True, if the bot supports inline queries. Returned only in getMe.
     """
-    
     id: typing.Optional[int] = None
     is_bot: typing.Optional[bool] = None
     first_name: typing.Optional[str] = None
@@ -30,4 +30,3 @@ class User(pydantic.BaseModel):
     supports_inline_queries: typing.Optional[bool] = None
     
     
-

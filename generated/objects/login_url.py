@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class LoginUrl(pydantic.BaseModel):
@@ -23,11 +24,9 @@ class LoginUrl(pydantic.BaseModel):
     :param request_write_access: Optional. Pass True to request the permission for your bot to send messages to the
     user.
     """
-    
     url: typing.Optional[str] = None
     forward_text: typing.Optional[str] = None
     bot_username: typing.Optional[str] = None
     request_write_access: typing.Optional[bool] = None
     
     
-

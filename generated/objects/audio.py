@@ -1,7 +1,8 @@
+import typing
+
 import pydantic
 
 from generated.objects.photo_size import PhotoSize
-
 
 
 class Audio(pydantic.BaseModel):
@@ -18,7 +19,6 @@ class Audio(pydantic.BaseModel):
     :param file_size: Optional. File size
     :param thumb: Optional. Thumbnail of the album cover to which the music file belongs
     """
-    
     file_id: typing.Optional[str] = None
     file_unique_id: typing.Optional[str] = None
     duration: typing.Optional[int] = None
@@ -30,4 +30,3 @@ class Audio(pydantic.BaseModel):
     thumb: typing.Optional["PhotoSize"] = None
     
     
-

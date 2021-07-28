@@ -1,5 +1,6 @@
-import pydantic
+import typing
 
+import pydantic
 
 
 class ForceReply(pydantic.BaseModel):
@@ -16,10 +17,8 @@ class ForceReply(pydantic.BaseModel):
     Targets: 1) users that are @mentioned in the text of the Message object; 2) if the
     bot's message is a reply (has reply_to_message_id), sender of the original message.
     """
-    
     force_reply: typing.Optional[bool] = None
     input_field_placeholder: typing.Optional[str] = None
     selective: typing.Optional[bool] = None
     
     
-

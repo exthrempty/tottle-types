@@ -1,8 +1,9 @@
+import typing
+
 import pydantic
 
 from generated.objects.inline_keyboard_markup import InlineKeyboardMarkup
 from generated.objects.input_message_content import InputMessageContent
-
 
 
 class InlineQueryResultVenue(pydantic.BaseModel):
@@ -27,7 +28,6 @@ class InlineQueryResultVenue(pydantic.BaseModel):
     :param thumb_width: Optional. Thumbnail width
     :param thumb_height: Optional. Thumbnail height
     """
-    
     type: typing.Optional[str] = None
     id: typing.Optional[str] = None
     latitude: typing.Optional[float] = None
@@ -45,4 +45,3 @@ class InlineQueryResultVenue(pydantic.BaseModel):
     thumb_height: typing.Optional[int] = None
     
     
-

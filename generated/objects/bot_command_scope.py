@@ -1,7 +1,6 @@
 import pydantic
 
 
-
 class BotCommandScope(pydantic.BaseModel):
     """
     This object represents the scope to which bot commands are applied. Currently, the
@@ -9,4 +8,3 @@ class BotCommandScope(pydantic.BaseModel):
     """
     pass
     
-
