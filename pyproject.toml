@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "tottle-types"
-version = "2.0.2"
-description = ""
+version = "3.0.1"
+description = "Quick but powerful way to generate code from Telegram API Schema"
 authors = ["exthrempty <andrewsalt.e@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -10,7 +10,6 @@ requests = "^2.25.1"
 pyhumps = "^3.0.2"
 pydantic = "^1.8.2"
 loguru = "^0.5.3"
-tottle = "^1.4"
 Jinja2 = "^3.0.1"
 Markdown = "^3.3.4"
 
